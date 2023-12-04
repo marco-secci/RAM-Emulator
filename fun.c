@@ -1,12 +1,13 @@
-#include <fun.h>
+#include "fun.h"
+#include <stdbool.h>
 
-// Returns the target instruction number if the comparison is true;
-// Returns the next instruction number if the comparison is false.
-int cmp(int a, int b, int curr, int target)
+// Returns true if the comparison is true;
+// Returns false if the comparison is false.
+bool cmp(int a, int b)
 {
     if (a == b)
-        return target;
-    return curr + 1;
+        return true;
+    return false;
 }
 
 // Sets the address of the given value to 0 (the first available).

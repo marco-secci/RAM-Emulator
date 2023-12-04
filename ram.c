@@ -1,25 +1,22 @@
 #include <stdio.h>
 
-c(int *ptr, int *cmp)
+// Internal files:
+#include "fun.h"
+#include "ram.h"
+
+int sum(int a, int b)
 {
-}
+q0:
+    if (cmp(a, b))
+        goto q99;
 
-int main(void)
-{
-    int x = 3;
-    int y = 1;
-    int k = 0;
-    int z = 0;
+    else
+        goto q1;
 
-    c(&x, &k);
-    for (int i = 0; i < y; i++)
-    {
-        x++;
-    }
+q1:
+    plus_one(a);
+    goto q0;
 
-    for (int i = 1; i < 5; i++)
-    {
-        k++;
-    }
-    return k;
+q99:
+    return a;
 }
